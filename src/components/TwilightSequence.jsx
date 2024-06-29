@@ -26,9 +26,9 @@ export default function TwilightSequence({ finalCharacterList, setFinishGame }) 
 
 
     return (
-        <div className="w-screen flex justify-center">
+        <div className="flex justify-center">
             <div className={"flex-col self-center " + ((characterList.length > 0) ? "flex" : "hidden")}>
-                <div className="flex flex-row gap-x-4 mb-4">
+                <div className="flex gap-x-4 mb-4 w-screen flex-wrap justify-center">
                     {characterList.map((i) => {
                         return(<span
                             key={i}
@@ -40,7 +40,7 @@ export default function TwilightSequence({ finalCharacterList, setFinishGame }) 
                     })}
                 </div>
                 <button
-                    className="p-4 bg-slate-600 text-white"
+                    className="p-4 bg-slate-600 text-white mx-14"
                     onClick={progressTwilight}
                 >
                     progress the twilight, no: {twilightNumber}, length: {characterList.length}
